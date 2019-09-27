@@ -1,0 +1,8 @@
+---
+# vars file for coredns
+coredns_install_dir: '{{ coredns_parent_install_dir }}/coredns-{{ coredns_ver }}'
+coredns_link: '{{ coredns_parent_install_dir }}/bin/coredns'
+coredns_platform: '{{ coredns_os }}_{{ coredns_arch }}'
+coredns_tgz: coredns_{{ coredns_ver }}_{{ coredns_platform }}.tgz
+coredns_url: '{{ coredns_mirror }}/v{{ coredns_ver }}/{{ coredns_tgz }}'
+coredns_checksum: '{{ coredns_checksums[coredns_ver][coredns_platform] }}'

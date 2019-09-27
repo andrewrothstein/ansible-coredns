@@ -1,0 +1,26 @@
+---
+# defaults file for coredns
+coredns_ver: '1.6.3'
+coredns_mirror: https://github.com/coredns/coredns/releases/download
+coredns_os: linux
+coredns_arch: amd64
+coredns_parent_install_dir: /usr/local
+
+coredns_checksums:
+  '1.6.3':
+    # https://github.com/coredns/coredns/releases/download/v1.6.3/coredns_1.6.3_darwin_amd64.tgz.sha256
+    darwin_amd64: sha256:cac64793b4c2bbdede49c0bab24ec1e3261db5a095fa8f63f13cfcebc17da9af
+    # https://github.com/coredns/coredns/releases/download/v1.6.3/coredns_1.6.3_linux_amd64.tgz.sha256
+    linux_amd64: sha256:ac888137e124b569189376eee3f6be077076ffa9255575470d83c282f5c17416
+    # https://github.com/coredns/coredns/releases/download/v1.6.3/coredns_1.6.3_linux_arm.tgz.sha256
+    linux_arm: sha256:8c03a8ec0620577df01a0da3962c5208a91f8de9cb107b162ec766dfc29d0100
+    # https://github.com/coredns/coredns/releases/download/v1.6.3/coredns_1.6.3_linux_arm64.tgz.sha256
+    linux_arm64: sha256:cf40df27567b33f34406d3e2a24f49d27738f3d5e0c703c7155ca5fec1206bfc
+    # https://github.com/coredns/coredns/releases/download/v1.6.3/coredns_1.6.3_linux_mips.tgz.sha256
+    linux_mips: sha256:bab30c839bbc13bf48bef4b3647474975afbf7915b9db992da7335818d39a5a2
+    # https://github.com/coredns/coredns/releases/download/v1.6.3/coredns_1.6.3_linux_ppc64le.tgz.sha256
+    linux_ppc64le: sha256:8068a08dd84ffeffb09c082b530bd0f0152ba911d76dc9cd202a53c4f1dcbcad
+    # https://github.com/coredns/coredns/releases/download/v1.6.3/coredns_1.6.3_linux_s390x.tgz.sha256
+    linux_s390x: sha256:cc817a640eb9cb5473c317270aa5eac9ba934b3edfc8777855649a831499596f
+    # https://github.com/coredns/coredns/releases/download/v1.6.3/coredns_1.6.3_windows_amd64.tgz.sha256
+    windows_amd64: sha256:c63ec554f9a8fce0c54ecbd38782000110cd379e0ea88779e40c9b1d270d0f57
