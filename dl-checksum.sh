@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
-VER=1.6.3
+VER=${1:-1.6.4}
 DIR=~/Downloads
 MIRROR=https://github.com/coredns/coredns/releases/download/v${VER}
 

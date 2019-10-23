@@ -1,6 +1,6 @@
 ---
 # defaults file for coredns
-coredns_ver: '1.6.3'
+coredns_ver: '1.6.4'
 coredns_mirror: https://github.com/coredns/coredns/releases/download
 coredns_os: linux
 coredns_arch: amd64
@@ -24,3 +24,20 @@ coredns_checksums:
     linux_s390x: sha256:cc817a640eb9cb5473c317270aa5eac9ba934b3edfc8777855649a831499596f
     # https://github.com/coredns/coredns/releases/download/v1.6.3/coredns_1.6.3_windows_amd64.tgz.sha256
     windows_amd64: sha256:c63ec554f9a8fce0c54ecbd38782000110cd379e0ea88779e40c9b1d270d0f57
+  '1.6.4':
+    # https://github.com/coredns/coredns/releases/download/v1.6.4/coredns_1.6.4_darwin_amd64.tgz.sha256
+    darwin_amd64: sha256:c3e38216257840814ade6d88b99346aad70630753746d0e682f2a51579c3fd3d
+    # https://github.com/coredns/coredns/releases/download/v1.6.4/coredns_1.6.4_linux_amd64.tgz.sha256
+    linux_amd64: sha256:2139b069a311db3339cb6d2b10b107c99a850d3c72ce5313a17b41848e77fb5a
+    # https://github.com/coredns/coredns/releases/download/v1.6.4/coredns_1.6.4_linux_arm.tgz.sha256
+    linux_arm: sha256:8d3b2ff98056427a138ad489b4a1b0ad9bae4660f7562a5392ebbe554b8341fe
+    # https://github.com/coredns/coredns/releases/download/v1.6.4/coredns_1.6.4_linux_arm64.tgz.sha256
+    linux_arm64: sha256:542344168af2384d43b7a220bc808f8ecb6ae8fa5f3e56eab2440fad06b5daad
+    # https://github.com/coredns/coredns/releases/download/v1.6.4/coredns_1.6.4_linux_mips.tgz.sha256
+    linux_mips: sha256:df53322ce87172eac91ec023a6fcb8274939a34562916629e923b5764a8f4ab4
+    # https://github.com/coredns/coredns/releases/download/v1.6.4/coredns_1.6.4_linux_ppc64le.tgz.sha256
+    linux_ppc64le: sha256:49b48a0f5a1d1652e6dddc4841f78314dea99f4330a6680d99f4af5bfdf82390
+    # https://github.com/coredns/coredns/releases/download/v1.6.4/coredns_1.6.4_linux_s390x.tgz.sha256
+    linux_s390x: sha256:9725afdcb783aea93f40632ad0ea335e92f9fd0cc62db399b9ad7187bad69aad
+    # https://github.com/coredns/coredns/releases/download/v1.6.4/coredns_1.6.4_windows_amd64.tgz.sha256
+    windows_amd64: sha256:86d615f9b64e241d2a539823565b941a169cb135870b0f554268abd128500cf8
