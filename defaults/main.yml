@@ -1,6 +1,6 @@
 ---
 # defaults file for coredns
-coredns_ver: '1.6.4'
+coredns_ver: '1.6.7'
 coredns_mirror: https://github.com/coredns/coredns/releases/download
 coredns_os: linux
 coredns_arch: amd64
@@ -41,3 +41,20 @@ coredns_checksums:
     linux_s390x: sha256:9725afdcb783aea93f40632ad0ea335e92f9fd0cc62db399b9ad7187bad69aad
     # https://github.com/coredns/coredns/releases/download/v1.6.4/coredns_1.6.4_windows_amd64.tgz.sha256
     windows_amd64: sha256:86d615f9b64e241d2a539823565b941a169cb135870b0f554268abd128500cf8
+  '1.6.7':
+    # https://github.com/coredns/coredns/releases/download/v1.6.7/coredns_1.6.7_darwin_amd64.tgz.sha256
+    darwin_amd64: sha256:c72ff8ab5fb85eb3743af7b0c29af615ad48e822d84d3578a003ee57ed5bfc1f
+    # https://github.com/coredns/coredns/releases/download/v1.6.7/coredns_1.6.7_linux_amd64.tgz.sha256
+    linux_amd64: sha256:ca229f972e5fbb65964998ad7aed78a677884874a023caee1c6551d0ee8e0c1b
+    # https://github.com/coredns/coredns/releases/download/v1.6.7/coredns_1.6.7_linux_arm.tgz.sha256
+    linux_arm: sha256:d3f94ea665a6af03634c2dfd93d4bca04e3c97f30123cf1207e9fc5825afa6c0
+    # https://github.com/coredns/coredns/releases/download/v1.6.7/coredns_1.6.7_linux_arm64.tgz.sha256
+    linux_arm64: sha256:2917ad13cd00a63db7c2a13cfc1f81e73920f3f76b7e323739241b3191f1aa2a
+    # https://github.com/coredns/coredns/releases/download/v1.6.7/coredns_1.6.7_linux_mips.tgz.sha256
+    linux_mips: sha256:4e4bc5b2b843ffe4b1c7d0378fc226a1420e7f1ca2751007e7761a6d6cb3b29d
+    # https://github.com/coredns/coredns/releases/download/v1.6.7/coredns_1.6.7_linux_ppc64le.tgz.sha256
+    linux_ppc64le: sha256:26b7b99bda1f86f6eaade0966551a7c19186db7f9a9bb90487b8f29b249f0396
+    # https://github.com/coredns/coredns/releases/download/v1.6.7/coredns_1.6.7_linux_s390x.tgz.sha256
+    linux_s390x: sha256:a45355122a733401e09b13c5d3a6e43003a1eeb75f2bc2450328a6096fb52d75
+    # https://github.com/coredns/coredns/releases/download/v1.6.7/coredns_1.6.7_windows_amd64.tgz.sha256
+    windows_amd64: sha256:c43035bc04f03437b87584017952b86322b2226e82932a21fde629db1dac6975

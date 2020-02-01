@@ -1,27 +1,30 @@
 #!/usr/bin/env sh
-VER=${1:-1.6.4}
 DIR=~/Downloads
-MIRROR=https://github.com/coredns/coredns/releases/download/v${VER}
+MIRROR=https://github.com/coredns/coredns/releases/download
 
 dl()
 {
-    local os=$1
-    local arch=$2
+    local ver=$1
+    local os=$2
+    local arch=$3
     local platform="${os}_${arch}"
-    local file=coredns_${VER}_${platform}.tgz.sha256
-    local url=$MIRROR/$file
+    local file=coredns_${ver}_${platform}.tgz.sha256
+    local url=$MIRROR/v$ver/$file
     printf "    # %s\n" $url
     printf "    %s: sha256:%s\n" $platform $(curl -sSL $url | awk '{print $1}')
 }
 
-printf "  '%s':\n" $VER
-dl darwin amd64
-dl linux amd64
-dl linux arm
-dl linux arm64
-dl linux mips
-dl linux ppc64le
-dl linux s390x
-dl windows amd64
+dl_ver() {
+    local ver=$1
+    printf "  '%s':\n" $ver
+    dl $ver darwin amd64
+    dl $ver linux amd64
+    dl $ver linux arm
+    dl $ver linux arm64
+    dl $ver linux mips
+    dl $ver linux ppc64le
+    dl $ver linux s390x
+    dl $ver windows amd64
+}
 
-
+dl_ver ${1:-1.6.7}
