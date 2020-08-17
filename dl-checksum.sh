@@ -1,4 +1,5 @@
 #!/usr/bin/env sh
+set -e
 DIR=~/Downloads
 MIRROR=https://github.com/coredns/coredns/releases/download
 
@@ -27,4 +28,4 @@ dl_ver() {
     dl $ver windows amd64
 }
 
-dl_ver ${1:-1.6.7}
+dl_ver ${1:-1.7.0}
