@@ -1,6 +1,6 @@
 ---
 # defaults file for coredns
-coredns_ver: 1.7.0
+coredns_ver: 1.8.0
 coredns_mirror: https://github.com/coredns/coredns/releases/download
 coredns_os: linux
 coredns_arch: amd64
@@ -75,3 +75,20 @@ coredns_checksums:
     linux_s390x: sha256:8c980f684ef0d362fb92f3719f5c2c5dc3dd57ae40a03b368ecadceeed2d304e
     # https://github.com/coredns/coredns/releases/download/v1.7.0/coredns_1.7.0_windows_amd64.tgz.sha256
     windows_amd64: sha256:8c90aba3479017bb9af377e0a8c281eebe432287f16fd27b6992a3f7bb4582d5
+  '1.8.0':
+    # https://github.com/coredns/coredns/releases/download/v1.8.0/coredns_1.8.0_darwin_amd64.tgz.sha256
+    darwin_amd64: sha256:b2deb92a6b8042cf42ffb26e8c8a310f04952870426c26781cc2de7a0c5a66d7
+    # https://github.com/coredns/coredns/releases/download/v1.8.0/coredns_1.8.0_linux_amd64.tgz.sha256
+    linux_amd64: sha256:67761f2bc127d1cbf1c210b6085e84cc0df2457ef5088275d6a5918451e52df9
+    # https://github.com/coredns/coredns/releases/download/v1.8.0/coredns_1.8.0_linux_arm.tgz.sha256
+    linux_arm: sha256:9b3a2a146579eb7e951a48a5f6884ba922e42492c272b8a2c4db9a27f0228290
+    # https://github.com/coredns/coredns/releases/download/v1.8.0/coredns_1.8.0_linux_arm64.tgz.sha256
+    linux_arm64: sha256:7d668038c8286afb4456e7c72467a3d9679bd8d0b9f14a9c7db7e9be232d7f64
+    # https://github.com/coredns/coredns/releases/download/v1.8.0/coredns_1.8.0_linux_mips.tgz.sha256
+    linux_mips: sha256:12388fd86ea2d21785cd3b5f8185b72b71fa704fdae3471b1582a583536246be
+    # https://github.com/coredns/coredns/releases/download/v1.8.0/coredns_1.8.0_linux_ppc64le.tgz.sha256
+    linux_ppc64le: sha256:7345ab1357d906498a800f71a5447bc2309b123cfec668d2637a99534cb42062
+    # https://github.com/coredns/coredns/releases/download/v1.8.0/coredns_1.8.0_linux_s390x.tgz.sha256
+    linux_s390x: sha256:d9086faf32b2f070f09017a038dd836b14fa377cd5f5c8bb986f072e8d80dacd
+    # https://github.com/coredns/coredns/releases/download/v1.8.0/coredns_1.8.0_windows_amd64.tgz.sha256
+    windows_amd64: sha256:180370cc488c089ab28d08a5456db7d8ce3ddca779f77ae0559e55ff34b9e130
