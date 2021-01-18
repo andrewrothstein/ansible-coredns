@@ -9,7 +9,7 @@
       skip: true
       paths:
         - '{{ role_path }}/vars'
-- name: check for existing install
+- name: check for install in {{ coredns_install_dir }}
   become: yes
   stat:
     path: '{{ coredns_install_dir }}'
@@ -17,40 +17,40 @@
   register: coredns_binary
 - when: not coredns_binary.stat.exists
   block:
-    - name: download
+    - name: downloading {{ coredns_url }} to {{ coredns_tmp_tgz }}
       become: yes
       become_user: root
       get_url:
         url: '{{ coredns_url }}'
-        dest: /tmp/{{ coredns_tgz }}
+        dest: '{{ coredns_tmp_tgz }}'
         mode: 0644
         checksum: '{{ coredns_checksum }}'
-    - name: mkdir
+    - name: mkdir {{ coredns_install_dir }}
       become: yes
       become_user: root
       file:
         path: '{{ coredns_install_dir }}'
         mode: 0755
         state: directory
-    - name: unarchive
+    - name: unarchive {{ coredns_tmp_tgz }} to {{ coredns_install_dir }}
       become: yes
       become_user: root
       unarchive:
         remote_src: yes
-        src: /tmp/{{ coredns_tgz }}
+        src: '{{ coredns_tmp_tgz }}'
         dest: '{{ coredns_install_dir }}'
-        creates: '{{ coredns_install_dir }}/coredns'
+        creates: '{{ coredns_install_exe }}'
   always:
-    - name: cleanup
+    - name: rm {{ coredns_tmp_tgz }}
       become: yes
       become_user: root
       file:
-        path: /tmp/{{ coredns_tgz }}
+        path: '{{ coredns_tmp_tgz }}'
         state: absent
-- name: link
+- name: linking {{ coredns_link }} to {{ coredns_install_exe }}
   become: yes
   become_user: root
   file:
-    src: '{{ coredns_install_dir }}/coredns'
+    src: '{{ coredns_install_exe }}'
     dest: '{{ coredns_link }}'
     state: link

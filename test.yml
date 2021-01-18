@@ -2,3 +2,9 @@
 - hosts: all
   roles:
   - role: '{{ playbook_dir }}'
+  tasks:
+  - command: /usr/local/bin/coredns --version
+    register: coredns_test_output
+  - name: coredns --version
+    debug:
+      msg: '{{ coredns_test_output.stdout }}'
