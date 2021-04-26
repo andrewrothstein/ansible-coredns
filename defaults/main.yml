@@ -1,6 +1,6 @@
 ---
 # defaults file for coredns
-coredns_ver: 1.8.0
+coredns_ver: 1.8.3
 coredns_mirror: https://github.com/coredns/coredns/releases/download
 coredns_os: linux
 coredns_arch: amd64
@@ -92,3 +92,20 @@ coredns_checksums:
     linux_s390x: sha256:d9086faf32b2f070f09017a038dd836b14fa377cd5f5c8bb986f072e8d80dacd
     # https://github.com/coredns/coredns/releases/download/v1.8.0/coredns_1.8.0_windows_amd64.tgz.sha256
     windows_amd64: sha256:180370cc488c089ab28d08a5456db7d8ce3ddca779f77ae0559e55ff34b9e130
+  '1.8.3':
+    # https://github.com/coredns/coredns/releases/download/v1.8.3/coredns_1.8.3_darwin_amd64.tgz.sha256
+    darwin_amd64: sha256:8a0ca654b138bea9ca1989ca72add446bc85616ef3d401014cbc78f5ace86bf3
+    # https://github.com/coredns/coredns/releases/download/v1.8.3/coredns_1.8.3_linux_amd64.tgz.sha256
+    linux_amd64: sha256:a670a6ad7d45455841d8384a892373e0abc38b178252cb028866dbf84d442561
+    # https://github.com/coredns/coredns/releases/download/v1.8.3/coredns_1.8.3_linux_arm.tgz.sha256
+    linux_arm: sha256:094274129e2a38e47d9055d2f158659d1153203af0c066613e7fa4af3bca8c30
+    # https://github.com/coredns/coredns/releases/download/v1.8.3/coredns_1.8.3_linux_arm64.tgz.sha256
+    linux_arm64: sha256:4d5c9bffab2365d4b97ef64ae6cc9122e428fb714daa87fe209881c0ad0755c2
+    # https://github.com/coredns/coredns/releases/download/v1.8.3/coredns_1.8.3_linux_mips.tgz.sha256
+    linux_mips: sha256:092ac3a04b531130fde0409c84b7fc03308dbee287f7760320bca51bf1221aa2
+    # https://github.com/coredns/coredns/releases/download/v1.8.3/coredns_1.8.3_linux_ppc64le.tgz.sha256
+    linux_ppc64le: sha256:882f58ebb782ccbd7ad3d3a527821ad5925ea393aea5ead6ce6249ec8e746c51
+    # https://github.com/coredns/coredns/releases/download/v1.8.3/coredns_1.8.3_linux_s390x.tgz.sha256
+    linux_s390x: sha256:72c809c04ad775a9c3280d39877d5fd71abb10d011b649b32a067c3dc82a5ba4
+    # https://github.com/coredns/coredns/releases/download/v1.8.3/coredns_1.8.3_windows_amd64.tgz.sha256
+    windows_amd64: sha256:afb83305d420950d84e37342ecb5f406ff45138af281846971e2226ace32de7b
