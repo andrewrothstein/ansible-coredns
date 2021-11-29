@@ -1,8 +1,8 @@
 andrewrothstein.coredns
 =========
-[![Build Status](https://travis-ci.org/andrewrothstein/ansible-coredns.svg?branch=master)](https://travis-ci.org/andrewrothstein/ansible-coredns)
+![Build Status](https://github.com/andrewrothstein/ansible-coredns/actions/workflows/build.yml/badge.svg)
 
-A brief description of the andrewrothstein.coredns goes here.
+Installs [CoreDNS](https://coredns.io/)
 
 Requirements
 ------------

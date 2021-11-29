@@ -1,6 +1,6 @@
 dependencies:
 - role: andrewrothstein.unarchive-deps
-  version: v1.1.5
+  version: v1.2.1
 galaxy_info:
   author: Andrew Rothstein
   company: BlackRock Financial Management
@@ -19,15 +19,17 @@ galaxy_info:
     - all
   - name: Debian
     versions:
+    - bullseye
     - buster
-    - stretch
   - name: EL
     versions:
-    - all
+    - 8
   - name: Fedora
     versions:
-    - all
+    - 34
+    - 35
   - name: Ubuntu
     versions:
-    - all
+    - bionic
+    - focal
   role_name: coredns
