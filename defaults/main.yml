@@ -1,6 +1,6 @@
 ---
 # defaults file for coredns
-coredns_ver: 1.8.0
+coredns_ver: 1.8.6
 coredns_mirror: https://github.com/coredns/coredns/releases/download
 coredns_os: linux
 coredns_arch: amd64
@@ -92,3 +92,20 @@ coredns_checksums:
     linux_s390x: sha256:d9086faf32b2f070f09017a038dd836b14fa377cd5f5c8bb986f072e8d80dacd
     # https://github.com/coredns/coredns/releases/download/v1.8.0/coredns_1.8.0_windows_amd64.tgz.sha256
     windows_amd64: sha256:180370cc488c089ab28d08a5456db7d8ce3ddca779f77ae0559e55ff34b9e130
+  '1.8.6':
+    # https://github.com/coredns/coredns/releases/download/v1.8.6/coredns_1.8.6_darwin_amd64.tgz.sha256
+    darwin_amd64: sha256:d79e004bdab367b9dc88542297d177b6530aa1c2222b9102413f87ed8cac0ee0
+    # https://github.com/coredns/coredns/releases/download/v1.8.6/coredns_1.8.6_linux_amd64.tgz.sha256
+    linux_amd64: sha256:b97ce1a3ca01a0f5687dbc825ed4d8fd3ec14ed71b3abe0bc8b9bcc4cc4d337b
+    # https://github.com/coredns/coredns/releases/download/v1.8.6/coredns_1.8.6_linux_arm.tgz.sha256
+    linux_arm: sha256:fdb1b7a70bb04d40bae3793890c15e72b9551b18751faee4526df76786899911
+    # https://github.com/coredns/coredns/releases/download/v1.8.6/coredns_1.8.6_linux_arm64.tgz.sha256
+    linux_arm64: sha256:e6e4667c237e3355c3a611c1dc59e3fc83a49c23d1034a8c1bb14a0aebf8410e
+    # https://github.com/coredns/coredns/releases/download/v1.8.6/coredns_1.8.6_linux_mips.tgz.sha256
+    linux_mips: sha256:b0429b79747f652f6f68fcb8452049956f64b8646844d65516bf244ab3911a17
+    # https://github.com/coredns/coredns/releases/download/v1.8.6/coredns_1.8.6_linux_ppc64le.tgz.sha256
+    linux_ppc64le: sha256:46d5303e1063fcec9f243f063dd17b0bef9b32d5bc0d13c56890e6d5e627e3f0
+    # https://github.com/coredns/coredns/releases/download/v1.8.6/coredns_1.8.6_linux_s390x.tgz.sha256
+    linux_s390x: sha256:dd678fbd17852734720c97f4b387174ae25e08291911045598075026b5475dbe
+    # https://github.com/coredns/coredns/releases/download/v1.8.6/coredns_1.8.6_windows_amd64.tgz.sha256
+    windows_amd64: sha256:d41651587931aead96f562454d1b5b13462606238e7132ce36c8206468f7e2d1
