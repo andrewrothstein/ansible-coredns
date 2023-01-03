@@ -1,5 +1,7 @@
 ---
 # vars file for coredns
+coredns_os: '{{ ansible_system | lower }}'
+coredns_arch: '{{ coredns_arch_map[ansible_architecture] }}'
 coredns_platform: '{{ coredns_os }}_{{ coredns_arch }}'
 coredns_tgz: coredns_{{ coredns_ver }}_{{ coredns_platform }}.tgz
 coredns_tmp_tgz: /tmp/{{ coredns_tgz }}

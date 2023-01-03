@@ -23,9 +23,10 @@ dl_ver() {
     dl $ver linux arm
     dl $ver linux arm64
     dl $ver linux mips
+    dl $ver linux mips64le
     dl $ver linux ppc64le
     dl $ver linux s390x
     dl $ver windows amd64
 }
 
-dl_ver ${1:-1.9.3}
+dl_ver ${1:-1.10.0}
