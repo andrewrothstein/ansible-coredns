@@ -1,8 +1,8 @@
 ---
-- include_role:
-    name: andrewrothstein.unarchive-deps
-- name: resolve platform specific vars
-  include_vars: '{{ item }}'
+- ansible.builtin.include_role:
+    name: andrewrothstein.unarchivedeps
+- name: Resolve platform specific vars
+  ansible.builtin.include_vars: '{{ item }}'
   with_first_found:
     - files:
         - '{{ ansible_distribution }}-{{ ansible_distribution_release }}.yml'
@@ -11,48 +11,48 @@
       skip: true
       paths:
         - '{{ role_path }}/vars'
-- name: check for install in {{ coredns_install_dir }}
+- name: Check for install in {{ coredns_install_dir }}
   become: true
-  stat:
+  ansible.builtin.stat:
     path: '{{ coredns_install_dir }}'
   changed_when: false
   register: coredns_binary
 - when: not coredns_binary.stat.exists
   block:
-    - name: downloading {{ coredns_url }} to {{ coredns_tmp_tgz }}
+    - name: Downloading {{ coredns_url }} to {{ coredns_tmp_tgz }}
       become: true
       become_user: root
-      get_url:
+      ansible.builtin.get_url:
         url: '{{ coredns_url }}'
         dest: '{{ coredns_tmp_tgz }}'
-        mode: 0644
+        mode: '644'
         checksum: '{{ coredns_checksum }}'
-    - name: mkdir {{ coredns_install_dir }}
+    - name: Mkdir {{ coredns_install_dir }}
       become: true
       become_user: root
-      file:
+      ansible.builtin.file:
         path: '{{ coredns_install_dir }}'
-        mode: 0755
+        mode: '755'
         state: directory
-    - name: unarchive {{ coredns_tmp_tgz }} to {{ coredns_install_dir }}
+    - name: Unarchive {{ coredns_tmp_tgz }} to {{ coredns_install_dir }}
       become: true
       become_user: root
-      unarchive:
+      ansible.builtin.unarchive:
         remote_src: true
         src: '{{ coredns_tmp_tgz }}'
         dest: '{{ coredns_install_dir }}'
         creates: '{{ coredns_install_exe }}'
   always:
-    - name: rm {{ coredns_tmp_tgz }}
+    - name: Rm {{ coredns_tmp_tgz }}
       become: true
       become_user: root
-      file:
+      ansible.builtin.file:
         path: '{{ coredns_tmp_tgz }}'
         state: absent
-- name: linking {{ coredns_link }} to {{ coredns_install_exe }}
+- name: Linking {{ coredns_link }} to {{ coredns_install_exe }}
   become: true
   become_user: root
-  file:
+  ansible.builtin.file:
     src: '{{ coredns_install_exe }}'
     dest: '{{ coredns_link }}'
     state: link
