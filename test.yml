@@ -1,10 +1,13 @@
 ---
-- hosts: all
+- name: Testing andrewrothstein.coredns
+  hosts: all
   roles:
-  - role: '{{ playbook_dir }}'
+    - role: '{{ playbook_dir }}'
   tasks:
-  - command: /usr/local/bin/coredns --version
-    register: coredns_test_output
-  - name: coredns --version
-    debug:
-      msg: '{{ coredns_test_output.stdout }}'
+    - name: Executing 'coredns --version'
+      ansible.builtin.command: /usr/local/bin/coredns --version
+      changed_when: false
+      register: coredns_test_output
+    - name: Output of 'coredns --version'
+      ansible.builtin.debug:
+        msg: '{{ coredns_test_output.stdout }}'

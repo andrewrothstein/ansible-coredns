@@ -1,5 +1,6 @@
 ---
-- ansible.builtin.include_role:
+- name: Installing andrewrothstein.unarchivedeps
+  ansible.builtin.include_role:
     name: andrewrothstein.unarchivedeps
 - name: Resolve platform specific vars
   ansible.builtin.include_vars: '{{ item }}'
@@ -17,7 +18,8 @@
     path: '{{ coredns_install_dir }}'
   changed_when: false
   register: coredns_binary
-- when: not coredns_binary.stat.exists
+- name: Downloading and installing coredns
+  when: not coredns_binary.stat.exists
   block:
     - name: Downloading {{ coredns_url }} to {{ coredns_tmp_tgz }}
       become: true
