@@ -1,6 +1,6 @@
 ---
 # defaults file for coredns
-coredns_ver: 1.11.3
+coredns_ver: 1.11.4
 coredns_mirror: https://github.com/coredns/coredns/releases/download
 coredns_arch_map:
   aarch64: arm64
@@ -257,3 +257,22 @@ coredns_checksums:
     linux_s390x: sha256:acf94127dd3e376d9f2bc20d7b6271ebe72fcc7f5eba32e45911d8e725609911
     # https://github.com/coredns/coredns/releases/download/v1.11.3/coredns_1.11.3_windows_amd64.tgz.sha256
     windows_amd64: sha256:907901bbcf084e16c22c107b808db826ca2a260d8fee5db091b3386531846d4f
+  '1.11.4':
+    # https://github.com/coredns/coredns/releases/download/v1.11.4/coredns_1.11.4_darwin_amd64.tgz.sha256
+    darwin_amd64: sha256:fc31417bc52f7d3daa12bd26fd7270aefc368d3edbc61093c28aa4c079a93d60
+    # https://github.com/coredns/coredns/releases/download/v1.11.4/coredns_1.11.4_linux_amd64.tgz.sha256
+    linux_amd64: sha256:3dd1b565a6b72e04f7c19dc461ffcc7b8e013d520569aa163312384a5be307e5
+    # https://github.com/coredns/coredns/releases/download/v1.11.4/coredns_1.11.4_linux_arm.tgz.sha256
+    linux_arm: sha256:2e0582ab20f64826f0efd37ee8a37e63aad9abdf9d82398fb18e1c77bd53f0d9
+    # https://github.com/coredns/coredns/releases/download/v1.11.4/coredns_1.11.4_linux_arm64.tgz.sha256
+    linux_arm64: sha256:54cf9dd7c2af46072b12e8bf0412a2f2d42098064ed2d75d746028b73ede455d
+    # https://github.com/coredns/coredns/releases/download/v1.11.4/coredns_1.11.4_linux_mips.tgz.sha256
+    linux_mips: sha256:374a2e9e8bf1b31ed84225a7d431ce0ff2639050d917fa55e35037811e015e82
+    # https://github.com/coredns/coredns/releases/download/v1.11.4/coredns_1.11.4_linux_mips64le.tgz.sha256
+    linux_mips64le: sha256:a8d8f74b77b05479da91e70be2649ed8f0341b79ae7c0f6cc7c3ef7dfabe5ce1
+    # https://github.com/coredns/coredns/releases/download/v1.11.4/coredns_1.11.4_linux_ppc64le.tgz.sha256
+    linux_ppc64le: sha256:bd0c76587bc8f4907d1b5d27963f9f38b72c79c922ecb94f7dcc40d723b051d6
+    # https://github.com/coredns/coredns/releases/download/v1.11.4/coredns_1.11.4_linux_s390x.tgz.sha256
+    linux_s390x: sha256:083c26a3f821d66275d4cd4cad8767baab8b95810ffdf05b88115393d1d4c090
+    # https://github.com/coredns/coredns/releases/download/v1.11.4/coredns_1.11.4_windows_amd64.tgz.sha256
+    windows_amd64: sha256:080d1c176d67de6080e8b3c9f5573c7f615337e1da19dc338a9f602db867e209
