@@ -1,6 +1,7 @@
 #!/bin/sh
 set -e
-DIR=~/Downloads
+DIR=$(mktemp -d)
+trap 'rm -rf "$DIR"' EXIT
 MIRROR=https://github.com/coredns/coredns/releases/download
 
 dl()
@@ -11,8 +12,15 @@ dl()
     local platform="${os}_${arch}"
     local file=coredns_${ver}_${platform}.tgz.sha256
     local url=$MIRROR/v$ver/$file
-    printf "    # %s\n" $url
-    printf "    %s: sha256:%s\n" $platform $(curl -sSL $url | awk '{print $1}')
+    local sum
+    sum=$(curl -fsSL --proto '=https' --tlsv1.2 "$url" | awk '{print $1}')
+    if ! printf '%s' "$sum" | grep -Eq '^[0-9a-f]{64}$'
+    then
+        echo "bad or missing checksum for $url: '$sum'" >&2
+        exit 1
+    fi
+    printf "    # %s\n" "$url"
+    printf "    %s: sha256:%s\n" "$platform" "$sum"
 }
 
 dl_ver() {
@@ -29,4 +37,4 @@ dl_ver() {
     dl $ver windows amd64
 }
 
-dl_ver ${1:-1.14.1}
+dl_ver ${1:-1.15.0}
